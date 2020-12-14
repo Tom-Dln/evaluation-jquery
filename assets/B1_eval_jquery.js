@@ -1,27 +1,31 @@
 /* --------------------------------------------------------------------------
 
-Votre code ici
+    Evaluation Jquery - Tom Delaunay
 
 -------------------------------------------------------------------------- */
 
 let checkboxStatus = 0;
 let sizeActual = 50;
 
+// Fonctions pour Partie 1
 
-// Fonction pour Partie 1
 function part1_q1() {
     $(document).on("click", "#toggleRedSquare", function () {
         if (checkboxStatus == 0) {
             checkboxStatus = 1;
             $(".redsquare-app").addClass("is-active");
             $(".redsquare-controls button").removeAttr("disabled");
+            $(".redsquare-controls button").removeClass("btn-light");
+            $(".redsquare-controls button").addClass("btn-primary");
         }
         else {
             checkboxStatus = 0;
             $(".redsquare-app").removeClass("is-active");
             $(".redsquare-controls button").attr("disabled", "");
+            $(".redsquare-controls button").removeClass("btn-primary");
+            $(".redsquare-controls button").addClass("btn-light");
         }
-        console.log(checkboxStatus)
+        console.log(checkboxStatus);
     });
 }
 
@@ -31,6 +35,7 @@ function part1_q3() {
             $(".square").css("width", "+=20");
             $(".square").css("height", "+=20");
             sizeActual += 20;
+            console.log(sizeActual);
         }
     });
 }
@@ -41,6 +46,7 @@ function part1_q4() {
             $(".square").css("width", "-=20");
             $(".square").css("height", "-=20");
             sizeActual -= 20;
+            console.log(sizeActual);
         }
     });
 }
@@ -61,9 +67,12 @@ function part1_q6() {
     });
 }
 
+// Fonction pour Partie 2
+
 function jumbotron() {
     // Question 1
 
+    $(".jumbotron a").attr("href", "#");
 
     // Question 2
 
@@ -72,21 +81,17 @@ function jumbotron() {
 
     // Question 3
     
-    $("ul").siblings("a").prepend('<i class="fa fa-plus-circle"></i> ')
+    $("ul").siblings("a").prepend('<i class="fa fa-plus-circle"></i> ');
 
     // Question 4
 
-    $(".jumbotron p i").text($(".jumbotron").data("source"))
+    $(".jumbotron p i").text($(".jumbotron").data("source"));
     
     // Question 5
 
-    $(".team").parent(".jumbotron").css("color", "red")
+    $(".team").parent().parent().parent().prev().children().children().eq(2).addClass("list-group-item-success");
 
 }
-
-
-
-
 
 
 
