@@ -31,7 +31,7 @@ function part1_q1() {
     });
 }
 
-function part1_q3() {
+function part1_q2() {
 
 }
 
@@ -105,6 +105,7 @@ function jumbotron() {
 $(function() {
     console.log("Chargement JS - OK");
     part1_q1();
+    part1_q2();
     part1_q3();
     part1_q4();
     part1_q5();
