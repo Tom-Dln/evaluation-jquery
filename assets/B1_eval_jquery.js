@@ -4,6 +4,8 @@
 
 -------------------------------------------------------------------------- */
 
+// Déclaration des Variables Globales
+
 let checkboxStatus = 0;
 let sizeActual = 50;
 
@@ -28,6 +30,11 @@ function part1_q1() {
         console.log(checkboxStatus);
     });
 }
+
+function part1_q3() {
+
+}
+
 
 function part1_q3() {
     $(document).on("click", "#scaleUp", function () {
@@ -93,7 +100,7 @@ function jumbotron() {
 
 }
 
-
+// Fonction jQuery Globale
 
 $(function() {
     console.log("Chargement JS - OK");
